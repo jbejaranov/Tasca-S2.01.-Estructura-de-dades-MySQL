@@ -1,0 +1,17 @@
+SELECT nombre FROM producto;
+SELECT nombre, precio FROM producto;
+SHOW COLUMNS FROM producto;
+SELECT nombre, precio AS €, precio AS $ FROM producto;
+SELECT nombre AS nom_de_producto, precio AS €, precio AS $ FROM producto;
+SELECT UPPER(RTRIM(nombre)), precio FROM producto;
+SELECT UPPER(RTRIM(nombre)), precio FROM producto;
+SELECT nombre, SUBSTRING(nombre, 1, 2) AS caracter FROM fabricante;
+SELECT nombre, ROUND(precio) FROM producto;
+SELECT nombre, TRUNCATE(precio,0) AS precio FROM producto;
+SELECT codigo_fabricante, fabricante.nombre FROM producto INNER JOIN fabricante ON codigo_fabricante=fabricante.codigo;
+SELECT DISTINCT(codigo_fabricante), fabricante.nombre FROM producto INNER JOIN fabricante ON codigo_fabricante=fabricante.codigo;
+SELECT nombre FROM fabricante ORDER BY nombre ASC;
+SELECT nombre FROM fabricante ORDER BY nombre DESC;
+SELECT nombre, precio FROM producto ORDER BY nombre ASC, precio DESC;
+SELECT * FROM fabricante LIMIT 5;
+SELECT * FROM fabricante LIMIT 3, 2;
